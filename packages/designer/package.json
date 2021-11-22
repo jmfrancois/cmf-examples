@@ -1,7 +1,10 @@
 {
-  "name": "cmf-designer",
+  "name": "@talend/cmf-designer",
   "version": "0.1.0",
-  "private": true,
+  "devDependencies": {
+    "@talend/scripts-core": "^11.3.0",
+    "@talend/scripts-preset-react": "^11.1.1"
+  },
   "dependencies": {
     "@talend/react-cmf": "^0.201.0-2",
     "bootstrap": "^4.1.2",
