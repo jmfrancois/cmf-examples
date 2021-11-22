@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "env",
+    "react"
+  ],
+  "ignore": [
+    "**/**/*.css"
+  ],
+  "plugins": [
+    "transform-async-to-generator",
+    "transform-class-properties",
+    "transform-export-extensions",
+    "transform-object-rest-spread"
+  ]
+}

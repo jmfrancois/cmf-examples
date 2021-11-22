@@ -1,0 +1,8 @@
+{
+  "preset": "@talend/scripts-preset-react",
+  "cmf": true,
+  "html": {
+    "title": "CMF Error test",
+    "appId": "tmc"
+  }
+}

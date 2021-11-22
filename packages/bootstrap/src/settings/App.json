@@ -1,0 +1,82 @@
+{
+  "props": {
+    "App#default": {
+      "components": {
+        "children": [
+          { "component": "Navbar", "componentId": "main" },
+          { "component": "Grid", "componentId": "main" }
+        ]
+      }
+    },
+    "Grid#main": {
+      "container": true,
+      "components": {
+        "children": [
+          { "component": "Row", "componentId": "intro" },
+          { "component": "Row", "componentId": "registry" }
+        ]
+      }
+    },
+    "Row#intro": {
+      "components": {
+        "children": [
+          { "component": "Col", "componentId": "intro-left" },
+          { "component": "Col", "componentId": "intro-right" }
+        ]
+      }
+    },
+    "Col#intro-left": {
+      "md": 5,
+      "text": [
+        "Using CMF you can describe the UI using a simple configuration",
+        "Here we are defining the grid"
+      ],
+      "components": {
+        "children": [
+          { "component": "Alert", "componentId": "my-alert" }
+        ]
+      }
+    },
+    "Col#intro-right": {
+      "md": 7,
+      "preExpression": {
+        "id": "getSettings",
+        "args": ["App#default"]
+      }
+    },
+    "Alert#my-alert": {
+      "bsStyle": "warning",
+      "text": "Warning you are designing a UI using JSON"
+    },
+    "Row#registry": {
+      "components": {
+        "children": [
+          { "component": "Col", "componentId": "registry-left" },
+          { "component": "Col", "componentId": "registry-right" }
+        ]
+      }
+    },
+    "Col#registry-left": {
+      "md": 5,
+      "text": [
+        "To make it happens we use a registry which make the link btw",
+        "a string as key and function or component as a value",
+        "The keys are prefixed to not create conflict"
+      ]
+    },
+    "Col#registry-right": {
+      "md": 7,
+      "preExpression": {
+        "id": "getRegistry",
+        "args": ["_.route.component"]
+      }
+    },
+    "Button#test": {
+      "text": "demo"
+    }
+  },
+  "routes": {
+    "path": "/",
+    "component": "App"
+  }
+}

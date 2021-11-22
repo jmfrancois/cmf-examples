@@ -1,0 +1,37 @@
+{
+  "props": {
+    "Navbar#main": {
+      "inverse": true,
+      "components": {
+        "children": [
+          { "component": "Nav", "componentId": "main" }
+        ]
+      }
+    },
+    "Nav#main": {
+      "components": {
+        "children": [
+          { "component": "NavItem", "componentId": "React" },
+          { "component": "NavItem", "componentId": "CMF" },
+          { "component": "NavItem", "componentId": "Bootstrap" }
+        ]
+      }
+    },
+    "NavItem#React": {
+      "eventKey": 1,
+      "href": "https://facebook.github.io/react/",
+      "target":"_blank",
+      "text": "React"
+    },
+    "NavItem#CMF": {
+      "eventKey": 1,
+      "href": "https://github.com/Talend/ui/tree/master/packages/cmf/README.md",
+      "text": "CMF"
+    },
+    "NavItem#Bootstrap": {
+      "eventKey": 1,
+      "href": "https://react-bootstrap.github.io",
+      "text": "Bootstrap"
+    }
+  }
+}

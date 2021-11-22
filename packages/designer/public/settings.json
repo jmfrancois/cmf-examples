@@ -1,0 +1,15 @@
+{
+  "props": {
+    "App#default": {
+      "left": [{ "component": "DesignerTree" }, { "component": "DesignerForm" }],
+      "right": { "component": "DesignerPreview" }
+    },
+    "DesignerDemo#demo": {
+        "color": "primary"
+    }
+  },
+  "routes": {
+    "path": "/",
+    "component": "App"
+  }
+}

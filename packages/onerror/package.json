@@ -1,0 +1,41 @@
+{
+  "name": "@talend/cmf-error",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "talend-scripts start --open",
+    "prepublish": "talend-scripts build",
+    "lint:es": "talend-scripts lint:es",
+    "test": "talend-scripts test",
+    "test:watch": "talend-scripts test --watch",
+    "test:cov": "talend-scripts test --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "react",
+    "talend"
+  ],
+  "author": "Talend Frontend <frontend@talend.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@talend/scripts-core": "^11.2.0",
+    "@talend/scripts-preset-react": "^11.1.1"
+  },
+  "dependencies": {
+    "@talend/bootstrap-theme": "^6.38.5",
+    "@talend/icons": "^6.36.3",
+    "@talend/react-cmf": "^6.38.4",
+    "@talend/react-components": "^6.41.2",
+    "@talend/react-containers": "^6.39.0",
+    "i18next": "^20.6.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-i18next": "^11.13.0"
+  }
+}
