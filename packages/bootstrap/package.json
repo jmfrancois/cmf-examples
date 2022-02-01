@@ -5,12 +5,12 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=developement webpack-dev-server --inline --config webpack.config.dev.js --content-base build/",
+    "start": "talend-scripts start",
     "prepublish": "cmf-settings",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "lint:es": "eslint --config .eslintrc src/*.js",
+    "test": "talend-scripts test",
+    "test:watch": "talend-scripts test --watch",
+    "test:cov": "talend-scripts test --coverage",
+    "lint:es": "talend-scripts lint:es",
     "lint": "npm run lint:es"
   },
   "repository": {
@@ -35,7 +35,7 @@
     "@talend/react-containers": "^7.0.1",
     "@talend/react-forms": "^7.0.1",
     "lodash": "^4.17.21",
-    "prop-types": "15.7.2",
+    "prop-types": "^15.8.1",
     "react": "^16.14.0"
   }
 }

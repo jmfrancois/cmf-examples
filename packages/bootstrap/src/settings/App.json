@@ -32,9 +32,7 @@
         "Here we are defining the grid"
       ],
       "components": {
-        "children": [
-          { "component": "Alert", "componentId": "my-alert" }
-        ]
+        "children": [{ "component": "Alert", "componentId": "my-alert" }]
       }
     },
     "Col#intro-right": {
@@ -74,9 +72,5 @@
     "Button#test": {
       "text": "demo"
     }
-  },
-  "routes": {
-    "path": "/",
-    "component": "App"
   }
 }

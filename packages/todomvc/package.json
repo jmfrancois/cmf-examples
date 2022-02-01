@@ -36,9 +36,6 @@
     "prop-types": "^15.8.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-redux": "^5.1.2",
-    "react-router": "^3.2.6",
-    "react-router-redux": "^4.0.8",
     "todomvc-app-css": "^2.4.1",
     "todomvc-common": "^1.0.5",
     "uuid": "^3.4.0"
