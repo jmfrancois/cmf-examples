@@ -5,8 +5,8 @@
   "private": true,
   "main": "app/index.js",
   "scripts": {
-    "start": "talend-scripts start",
-    "prepublish": "talend-scripts build",
+    "start": "cmf-settings && talend-scripts start",
+    "prepublish": "cmf-settings && talend-scripts build",
     "lint:es": "talend-scripts lint:es",
     "test": "talend-scripts test",
     "test:watch": "talend-scripts test --watch",

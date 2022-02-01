@@ -17,12 +17,12 @@ import * as sagas from './sagas';
 import saga from './saga';
 import ErrorPage from './components/ErrorPage';
 import i18n from 'i18next';
-import { initReactI18next } from "react-i18next";
+import { initReactI18next } from 'react-i18next';
 
 i18n.use(initReactI18next).init({
 	react: {
-		useSuspense: false
-	}
+		useSuspense: false,
+	},
 });
 
 const littleContainers = {
@@ -33,7 +33,7 @@ const littleContainers = {
 		IconsProvider,
 		Notification,
 	},
-}
+};
 
 /**
  * Initialize CMF
@@ -55,5 +55,5 @@ cmf.bootstrap({
 	settingsURL: '/settings.json',
 	AppLoader: 'AppLoader',
 	modules: [littleContainers],
-	RootComponent: ErrorPage,
+	RootComponent: (props) => <ErrorPage {...props} />,
 });

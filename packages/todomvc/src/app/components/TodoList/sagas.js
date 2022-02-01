@@ -1,7 +1,13 @@
-import { select, takeEvery, put } from 'redux-saga/lib/effects';
+import { select, takeEvery, put } from 'redux-saga/effects';
 import uuid from 'uuid';
 import { Map, List } from 'immutable';
-import { ACTION_TYPE_ADD_ITEM, ACTION_TYPE_DELETE, ACTION_TYPE_COMPLETED, ACTION_TYPE_FILTER, ACTION_TYPE_CLEAR } from './constants';
+import {
+	ACTION_TYPE_ADD_ITEM,
+	ACTION_TYPE_DELETE,
+	ACTION_TYPE_COMPLETED,
+	ACTION_TYPE_FILTER,
+	ACTION_TYPE_CLEAR,
+} from './constants';
 import TodoListComponent from './TodoList.component';
 
 function* onAddEffect({ text }) {
@@ -17,14 +23,14 @@ function* onAddEffect({ text }) {
 
 function* onDeleteEffect({ id }) {
 	const state = yield select(TodoListComponent.getState);
-	const todos = state.get('todos').filter(item => item.get('id') !== id);
+	const todos = state.get('todos').filter((item) => item.get('id') !== id);
 	const newState = state.set('todos', todos);
 	yield put(TodoListComponent.setStateAction(newState));
 }
 
 function* onCompletedEffect({ id }) {
 	const state = yield select(TodoListComponent.getState);
-	const todos = state.get('todos').map(item => {
+	const todos = state.get('todos').map((item) => {
 		if (item.get('id') === id) {
 			return item.set('completed', !item.get('completed'));
 		}
