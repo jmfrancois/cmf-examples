@@ -20,5 +20,6 @@ import components from './components';
  */
 cmf.bootstrap({
 	components,
+	RootComponent: (props) => <components.App {...props} />,
 	settingsURL: '/settings.json',
 });

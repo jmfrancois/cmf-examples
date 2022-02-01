@@ -36,13 +36,15 @@ function TodoList(props) {
 				id="toggle-all"
 				className="toggle-all"
 				type="checkbox"
-				onChange={() => props.dispatch({
-					type: TodoList.ACTION_TYPE_TOGGLE_ALL,
-				})}
+				onChange={() =>
+					props.dispatch({
+						type: TodoList.ACTION_TYPE_TOGGLE_ALL,
+					})
+				}
 			/>
 			<label htmlFor="toggle-all">Mark all as complete</label>
 			<ul className="todo-list">
-				{props.todos.filter(filter(props.filter)).map(todo => (
+				{props.todos.filter(filter(props.filter)).map((todo) => (
 					<li className={todo.completed ? 'completed' : ''} key={todo.text}>
 						<Inject component="TodoItem" item={todo} />
 					</li>
@@ -53,11 +55,12 @@ function TodoList(props) {
 }
 TodoList.displayName = 'TodoList';
 TodoList.propTypes = {
-	todos: PropTypes.arrayOf(PropTypes.shape({
-		id: PropTypes.string.isRequired,
-		text: PropTypes.string.isRequired,
-	})),
-	...cmfConnect,
+	todos: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.string.isRequired,
+			text: PropTypes.string.isRequired,
+		}),
+	),
 };
 TodoList.defaultProps = {
 	todos: [],
@@ -68,4 +71,5 @@ export default cmfConnect({
 	defaultProps: {
 		spreadCMFState: true,
 	},
+	withDispatch: true,
 })(TodoList);

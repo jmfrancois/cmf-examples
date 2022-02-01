@@ -1,5 +1,6 @@
 # Log files #
 *.log
+dist
 
 # Mac OS index files #
 .DS_Store

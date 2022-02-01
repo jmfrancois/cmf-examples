@@ -6,7 +6,7 @@ import { Map } from 'immutable';
 const DEFAULT_STATE = new Map();
 
 function dispatchOnEnter(props) {
-	return event => {
+	return (event) => {
 		if (event.key === 'Enter') {
 			props.dispatchActionCreator('TodoList#add', event, { text: props.state.get('text') });
 			props.setState(props.state.set('text', ''));
@@ -50,4 +50,5 @@ export default cmfConnect({
 		},
 		spreadCMFState: true,
 	},
+	withDispatchActionCreator: true,
 })(Header);

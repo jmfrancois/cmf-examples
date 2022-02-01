@@ -1,3 +1,4 @@
+import React from 'react';
 import cmf from '@talend/react-cmf';
 import App from './components/App';
 import components from './components';
@@ -17,5 +18,5 @@ cmf.bootstrap({
 	components,
 	saga,
 	settingsURL: '/settings.json',
-	RootComponent: App,
+	RootComponent: (props) => <App {...props} />,
 });

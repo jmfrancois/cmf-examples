@@ -29,4 +29,6 @@ TodoItem.propTypes = {
 	...cmfConnect.propTypes,
 };
 
-export default cmfConnect({})(TodoItem);
+export default cmfConnect({
+	withDispatchActionCreator: true,
+})(TodoItem);

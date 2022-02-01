@@ -1,7 +1,7 @@
 import React from 'react';
-import omit from 'lodash/omit';
 import { cmfConnect } from '@talend/react-cmf';
 import { Inject } from '@talend/react-components';
+import PropTypes from 'prop-types';
 
 function App({ getComponent, components, ...props }) {
 	/**
@@ -10,17 +10,8 @@ function App({ getComponent, components, ...props }) {
 	 * so that all icons are available in each view
 	 */
 	const injected = Inject.all(getComponent, components);
-	const newprops = Object.assign({}, omit(props, [
-		'location',
-		'params',
-		'route',
-		'router',
-		'routeParams',
-		'routes',
-		...cmfConnect.INJECTED_PROPS,
-	]));
 	return (
-		<div {...newprops}>
+		<div {...props}>
 			{injected('children')}
 			{props.children}
 		</div>
@@ -28,8 +19,10 @@ function App({ getComponent, components, ...props }) {
 }
 
 App.propTypes = {
-	children: React.PropTypes.element,
+	children: PropTypes.element,
 	...cmfConnect.propTypes,
 };
 
-export default cmfConnect({})(App);
+export default cmfConnect({
+	withComponentRegistry: true,
+})(App);

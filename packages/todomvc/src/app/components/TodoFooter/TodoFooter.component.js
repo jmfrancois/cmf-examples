@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { cmfConnect } from '@talend/react-cmf';
 
 function TodoFooter(props) {
-	const onClick = event => {
+	const onClick = (event) => {
 		event.preventDefault();
 		event.stopPropagation();
 		if (event.target.tagName === 'BUTTON') {
@@ -22,16 +22,24 @@ function TodoFooter(props) {
 			</span>
 			<ul className="filters">
 				<li>
-					<a href="#/" onClick={onClick} className="selected">All</a>
+					<a href="#/" onClick={onClick} className="selected">
+						All
+					</a>
 				</li>
 				<li>
-					<a href="#/active" onClick={onClick} >Active</a>
+					<a href="#/active" onClick={onClick}>
+						Active
+					</a>
 				</li>
 				<li>
-					<a href="#/completed" onClick={onClick} >Completed</a>
+					<a href="#/completed" onClick={onClick}>
+						Completed
+					</a>
 				</li>
 			</ul>
-			<button className="clear-completed" onClick={onClick} >Clear completed</button>
+			<button className="clear-completed" onClick={onClick}>
+				Clear completed
+			</button>
 		</footer>
 	);
 }
@@ -51,4 +59,5 @@ export default cmfConnect({
 		countExpression: 'TodoList#count',
 		renderIfExpression: 'TodoList#has',
 	},
+	withDispatchActionCreator: true,
 })(TodoFooter);

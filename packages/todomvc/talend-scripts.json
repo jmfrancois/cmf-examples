@@ -1,4 +1,6 @@
 {
-  "preset": "talend",
-  "cmf": false
+  "preset": "@talend/scripts-preset-react",
+  "html": {
+    "title": "CMF todomvc"
+  }
 }
